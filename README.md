@@ -23,19 +23,56 @@ To run this app locally, follow these steps:
 3. Open `index.html` in your browser.
 
  ## Server Setup
-Install nginx
+ 
+1. Install nginx
+```bash
 sudo apt-get update
 sudo apt-get install nginx -y
-Clone the repository in /var/www/html/
+```
+2. Clone the repository in /var/www/html/
+``` bash
 cd /var/www/html/ 
 sudo git init
 sudo git remote add origin https://github.com/J0SHUALU/AniFind.git
 sudo git pull origin main
-Restart nginx
+```
+3. Restart nginx
+```bash
 sudo service nginx restart
+```
+
+## How it was deployed
+
+### For web servers (nginx)
+
+1. Do initial installation and configuration of nginx.
+
+2. Move to "/var/www/html/", initialize as git repository, set origin to "https://github.com/J0SHUALU/AniFind.git", then pull the project from the repository.
+
+3. Change "/etc/nginx/sites-available/default" to include:
+```bash
+location /results {
+    try_files $uri /results.html;
+}
+```
+to handle results route.
+
+4. Restart nginx
+
+## For loader balancer (haproxy)
+
+1. Install haproxy.
+
+2. Add lines to configuration file to handle requests and distribute them to each web server we have.
+
+3. Generate SSL certificate for our domain to allow https connections.
+
+4. Change configuration file to handle https requests, and to redirect http to https.
+
+5. Restart haproxy.
 
 ## Demo
-Here you can see a live demo of the application.
+
 
 ## Technologies Used
 - HTML
