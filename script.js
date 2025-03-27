@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const anime = data.data[0]; // First result
+            animeResults.innerHTML = "";
             displayAnime(anime);
         } catch (error) {
             animeResults.innerHTML = `<p>Error fetching data. Try again later.</p>`;
