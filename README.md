@@ -1,10 +1,10 @@
-# AnimeInfoHub
+# AniFind
 
-AnimeInfoHub is a simple web application that allows users to search for anime titles and display detailed information about each anime. It fetches data from the [Jikan API](https://api.jikan.moe/v4/), offering a rich set of details like episodes, score, genres, and synopsis.
+AniFind is a simple web application that allows users to search for anime titles and display detailed information about each anime. It fetches data from the [Jikan API](https://api.jikan.moe/v4/), offering a rich set of details like episodes, rating score, genres, and synopsis.
 
 ## Features
 - Search for anime by title
-- Displays detailed anime information such as episodes, score, genres, and synopsis
+- Displays detailed anime information such as episodes, rating score, genres, and synopsis
 - Interactive UI with smooth animations
 - Fetches data from the Jikan API
 
