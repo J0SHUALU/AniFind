@@ -14,13 +14,25 @@ To run this app locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/anime-info-app.git
+    git clone https://github.com/J0SHUALU/AniFind.git
     ```
 2. Navigate into the project directory:
     ```bash
-    cd anime-info-app
+    cd AniFind
     ```
 3. Open `index.html` in your browser.
+
+ ## Server Setup
+Install nginx
+sudo apt-get update
+sudo apt-get install nginx -y
+Clone the repository in /var/www/html/
+cd /var/www/html/ 
+sudo git init
+sudo git remote add origin https://github.com/J0SHUALU/AniFind.git
+sudo git pull origin main
+Restart nginx
+sudo service nginx restart
 
 ## Demo
 Here you can see a live demo of the application.
