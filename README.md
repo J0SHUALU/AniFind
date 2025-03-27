@@ -82,6 +82,3 @@ to handle results route.
 
 ## Credits
 - [Jikan API](https://api.jikan.moe/v4/) for providing anime data.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
