@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${anime.images.jpg.image_url}" alt="${anime.title}">
             <p><strong>Episodes:</strong> ${anime.episodes || "Unknown"}</p>
             <p><strong>Score:</strong> ${anime.score || "N/A"}</p>
+            <p><strong>Genres:</strong> ${anime.genres.map(genre => genre.name).join(', ')}</p>
             <p><strong>Synopsis:</strong> ${anime.synopsis || "No synopsis available."}</p>
+            <a href="${anime.url}" target="_blank">Read more on MyAnimeList</a>
         `;
 
         // Keep previous searches and append new results
